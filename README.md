@@ -7,7 +7,7 @@ To implement univariate Linear Regression to fit a straight line using least squ
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-1. Get the independent variable X and dependent variable Y.aa
+1. Get the independent variable X and dependent variable Y.
 2. Calculate the mean of the X -values and the mean of the Y -values.
 3. Find the slope m of the line of best fit using the formula. 
 <img width="231" alt="image" src="https://user-images.githubusercontent.com/93026020/192078527-b3b5ee3e-992f-46c4-865b-3b7ce4ac54ad.png">
@@ -20,46 +20,46 @@ To implement univariate Linear Regression to fit a straight line using least squ
 ```
 /*
 Program to implement univariate Linear Regression to fit a straight line using least squares.
-Developed by:TAMIZH THARANYA V
-RegisterNumber: 212224250018
+Developed by: RAVIPRASATH K
+RegisterNumber: 
 */
 ```
 ```
-
 import numpy as np
 import matplotlib.pyplot as plt
 
-X = np.array([1, 2, 3, 4, 5])
-Y = np.array([2, 4, 5, 4, 5])
-
+X=np.array(eval(input()))
+Y=np.array(eval(input()))
+```
+![image](https://github.com/user-attachments/assets/9895adcf-9e95-4dfa-829d-5d8d7f8208a5)
+```
 X_mean = np.mean(X)
 Y_mean = np.mean(Y)
-
 num = 0
 denom = 0
 
 for i in range(len(X)):
     num += (X[i] - X_mean) * (Y[i] - Y_mean)
-    denom += (X[i] - X_mean) ** 2
-
+    denom += (X[i] - X_mean)**2
+X_mean,Y_mean
+```
+![image](https://github.com/user-attachments/assets/c0e94adb-fa50-48c5-8106-a4b2fa215917)
+```
 m = num / denom
 b = Y_mean - m * X_mean
 
+print(m, b)
 y_predicted = m * X + b
-
-plt.scatter(X, Y, color='blue', label='Actual Data')
-plt.plot(X, y_predicted, color='red',
-         label='Regression Line')
-
-plt.xlabel("X")
-plt.ylabel("Y")
-plt.title("Univariate Linear Regression")
-plt.legend()
+print(y_predicted)
+```
+![image](https://github.com/user-attachments/assets/b79fb35b-c130-48ca-b24c-56f9e60af9d3)
+```
+plt.scatter(X,Y)
+plt.plot(X,y_predicted,color='red')
 plt.show()
-
+```
 ![image](https://github.com/user-attachments/assets/42e844f6-c9a3-4d66-b459-8b0bffb0e985)
 
-<img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/d7e5e7c6-bcf0-40f8-a760-6126bebf4f46" />
 
 
 ## Result:
